@@ -1,0 +1,7 @@
+langchain-openai
+langchain-core
+langchain-text-splitters
+python-dotenv
+fastapi[all]
+uvicorn
+numpy

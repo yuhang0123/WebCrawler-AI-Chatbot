@@ -181,7 +181,7 @@ function explainUnreadable(url) {
  *   { ok: false, error: "human-readable reason" }
  */
 async function readActivePage(opts) {
-  const options = Object.assign({ maxChars: 30000, preferMain: true }, opts || {});
+  const options = Object.assign({ maxChars: 200000, preferMain: true }, opts || {});
 
   const tab = await getActiveTab();
   if (!tab || tab.id === undefined) {
