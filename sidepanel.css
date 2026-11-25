@@ -1,0 +1,26 @@
+:root { color-scheme: light dark; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 12px;
+}
+h1 { font-size: 16px; margin: 0 0 8px; }
+.page-title { font-weight: 600; word-break: break-word; }
+.page-url { font-size: 12px; opacity: 0.7; word-break: break-all; margin-bottom: 12px; }
+.controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+button { padding: 6px 12px; cursor: pointer; }
+.status { font-size: 12px; margin: 8px 0; min-height: 16px; }
+.status.error { color: #d93025; }
+.preview {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 12px;
+  max-height: 60vh;
+  overflow-y: auto;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 6px;
+  padding: 8px;
+  margin: 0;
+}
+.preview:empty { display: none; }

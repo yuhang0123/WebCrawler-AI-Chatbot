@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebCrawler AI Chatbot</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header>
+    <h1>WebCrawler AI Chatbot</h1>
+    <div id="pageTitle" class="page-title">Loading…</div>
+    <div id="pageUrl" class="page-url"></div>
+  </header>
+
+  <section class="controls">
+    <button id="readButton">Read this page</button>
+    <label><input type="checkbox" id="isFullPage"> Include menus &amp; footers</label>
+  </section>
+
+  <div id="status" class="status"></div>
+  <pre id="preview" class="preview"></pre>
+
+  <script src="pageReader.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
