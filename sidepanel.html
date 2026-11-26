@@ -10,15 +10,18 @@
     <h1>WebCrawler AI Chatbot</h1>
     <div id="pageTitle" class="page-title">Loading…</div>
     <div id="pageUrl" class="page-url"></div>
+    <div class="controls">
+      <label><input type="checkbox" id="isFullPage"> Include menus &amp; footers</label>
+    </div>
   </header>
 
-  <section class="controls">
-    <button id="readButton">Read this page</button>
-    <label><input type="checkbox" id="isFullPage"> Include menus &amp; footers</label>
-  </section>
-
+  <main id="log"></main>
   <div id="status" class="status"></div>
-  <pre id="preview" class="preview"></pre>
+
+  <form id="chatForm">
+    <input id="question" placeholder="Ask about this page…" autocomplete="off" required>
+    <button id="sendButton">Send</button>
+  </form>
 
   <script src="pageReader.js"></script>
   <script src="sidepanel.js"></script>

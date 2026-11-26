@@ -1,26 +1,42 @@
 :root { color-scheme: light dark; }
+html, body { height: 100%; }
 body {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 14px;
   margin: 0;
   padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 h1 { font-size: 16px; margin: 0 0 8px; }
 .page-title { font-weight: 600; word-break: break-word; }
-.page-url { font-size: 12px; opacity: 0.7; word-break: break-all; margin-bottom: 12px; }
+.page-url { font-size: 12px; opacity: 0.7; word-break: break-all; margin-bottom: 8px; }
 .controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
 button { padding: 6px 12px; cursor: pointer; }
 .status { font-size: 12px; margin: 8px 0; min-height: 16px; }
 .status.error { color: #d93025; }
-.preview {
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-size: 12px;
-  max-height: 60vh;
+
+/* chat */
+#log {
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
   border: 1px solid rgba(128, 128, 128, 0.4);
   border-radius: 6px;
   padding: 8px;
-  margin: 0;
 }
-.preview:empty { display: none; }
+.msg {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  max-width: 88%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.msg.user { background: #2563eb; color: #fff; margin-left: auto; }
+.msg.bot { background: rgba(128, 128, 128, 0.18); }
+.msg.bot.error { background: rgba(217, 48, 37, 0.18); color: #d93025; }
+
+#chatForm { display: flex; gap: 6px; }
+#question { flex: 1; padding: 6px 8px; }
